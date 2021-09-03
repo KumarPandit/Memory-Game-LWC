@@ -23,6 +23,12 @@ export default class MemoryGameLwc extends LightningElement {
         {id:15,listClass:"card", type:"bolt", icon:'fa fa-bolt'},
         {id:16,listClass:"card", type:"bicycle", icon:'fa fa-bicycle'}
     ]
+
+    displayCard(event){
+        let currCard=event.target;
+        currCard.classList.add('open',"show","disabled");
+    }
+
     //lifecycle hook
     renderedCallback(){
         if(this.isLibLoaded){
@@ -36,4 +42,5 @@ export default class MemoryGameLwc extends LightningElement {
         this.isLibLoaded=true
     }
     }
+
 }
